@@ -10,7 +10,7 @@ import time
 
 """
 This is a script I used to generate conversations based on a dataset of essays.
-I then used these conversations to finetune a model that should resemble Paul Graham.
+I then used these conversations to finetune a model that should resemble Richard Feynman.
 
 All essays:
 
@@ -28,6 +28,7 @@ MODEL_LLAMA = "llama3-70b-8192"
 MODEL_LLAMA_8B = "llama3-8b-8192"
 MODEL_MIXTRAL = "gemma2-9b-it"
 
+#Use Groq to create responses
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
@@ -38,7 +39,7 @@ client = Groq(
 GENERATE_GREETINGS = False
 GENERATE_BASIC_INSTRUCTIONS = False
 GENERATE_QUESTION_ANSWER_PAIRS = False
-GENERATE_ADVICE_ANSWER_PAIRS = True
+GENERATE_ADVICE_ANSWER_PAIRS = False
 
 # MODELS
 GREETINGS_MODEL = MODEL_LLAMA
