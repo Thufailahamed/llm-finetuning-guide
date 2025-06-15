@@ -6,7 +6,7 @@ import pandas as pd
 # This time I formatted it in a parquet file directly.
 
 
-# see: https://huggingface.co/datasets/pookie3000/ascii-cats
+# see: https://huggingface.co/datasets/Thufail/Ascii-Art-Animals
 def create_dataset(path: Path, version_tag: str) -> None:
     paths = []
     for file in path.glob("**/*.txt"):
